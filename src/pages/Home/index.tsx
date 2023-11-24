@@ -10,19 +10,23 @@ import { z } from "zod";
 import { useFormData } from "../../context/useFormData";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { schema } from "../../schemas/solicitation";
+import { TipoSolicitacao } from "../../types/FormDataProps";
 
 type IFormDataProps = z.infer<typeof schema>;
-const SolicitationType = z.enum([
-  "Contábil",
-  "Jurídica",
-  "Trabalhista",
-  "Outras",
-  ""
-]);
-type TipoSolicitacao = z.infer<typeof SolicitationType>;
 
 export default function Home() {
+  // hook do context sendo chamado
   const { updateFormData } = useFormData();
+
+  // hook do react-hook-form sendo chamado.
+  // handleSubmit = função para envio do formulário.
+  // register = função para registrar os inputs.
+  // setValue = função para captar os valores dos inputs.
+  // reset = função para resetar os valores dos inputs.
+  // formState = objeto com as informações do estado do formulário, nesse caso, sendo usado para mensagens de erro.
+  // mode = serve para validar todos os campos de uma vez só.
+  // criteriaMode =  serve para validação de acordo com critérios. No caso dessa aplicação, ele valida todos.
+  // defaultValues = serve para definir valores iniciais para os inputs.
   const {
     handleSubmit,
     register,
@@ -44,14 +48,14 @@ export default function Home() {
     }
   });
   const handleSubmitForm = (data: IFormDataProps) => {
-    console.log(data.date);
-
     const sentDate = new Date(data.date);
 
+    // verifica se a data é inválida
     if (isNaN(sentDate.getTime())) {
       console.error("Data inválida");
       return;
     }
+    // incia a validação de prioridade, de acordo com a data.
     let priority = "";
     const currentDate = new Date();
 
