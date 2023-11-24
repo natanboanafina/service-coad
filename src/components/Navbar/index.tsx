@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 export const Navbar: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     document.body.addEventListener(
       "click",
@@ -13,6 +14,16 @@ export const Navbar: React.FC = () => {
       },
       { capture: true }
     );
+    // removeEventListener adicionado para evitar o efeito bubbling.
+    return () => {
+      document.body.removeEventListener(
+        "click",
+        () => {
+          setShowModal(false);
+        },
+        { capture: true }
+      );
+    };
   }, []);
 
   return (
