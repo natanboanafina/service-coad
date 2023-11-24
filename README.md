@@ -54,7 +54,7 @@ Esta aplicação possui a seguinte estrutura de diretórios, a partir do /src, d
   No arquivo GlobalStyles.ts, foi possível criar estilos que foram usados como padrão em determinados casos.
   No arquivo theme.ts, foi criado um tema personalizado, através do Styled-Components, para ser usado por toda aplicação.
 
-- /types => diretório reservado para uso de determinados tipos a serem usados na aplicação.
+- /types => diretório reservado para uso de certas tipagens a serem usadas na aplicação.
 
 ## Uso das libs
 
