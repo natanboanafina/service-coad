@@ -54,6 +54,8 @@ Esta aplicação possui a seguinte estrutura de diretórios, a partir do /src, d
   No arquivo GlobalStyles.ts, foi possível criar estilos que foram usados como padrão em determinados casos.
   No arquivo theme.ts, foi criado um tema personalizado, através do Styled-Components, para ser usado por toda aplicação.
 
+- /types => diretório reservado para uso de determinados tipos a serem usados na aplicação.
+
 ## Uso das libs
 
 - uuid => lib usada para gerar id únicos. Foi utilizada na hora de renderizar elementos únicos dentro de map().
