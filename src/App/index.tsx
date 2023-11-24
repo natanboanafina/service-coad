@@ -4,6 +4,13 @@ import Home from "../pages/Home";
 import SolicitationList from "../pages/SolicitationList";
 import { FormDataProvider } from "../context/list";
 
+/*
+ * Router: wrapper para as rotas. High Order Component
+ * FormDataProvider: context provider dos dados do formulário.
+ * Navbar: componente de navegação.
+ * Routes: componente de rotas.
+ */
+
 function App() {
   return (
     <>
