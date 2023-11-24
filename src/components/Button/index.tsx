@@ -1,5 +1,7 @@
 import * as Styled from "./styles";
 
+// Interface que extende as propriedades nativas do React para o elemento button.
+
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   style?: React.CSSProperties;

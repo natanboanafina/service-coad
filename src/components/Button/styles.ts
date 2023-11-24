@@ -5,7 +5,7 @@ export const Button = styled.button`
     border: none;
     border-radius: 10px;
     background-color: ${theme.colors.button.background};
-    color: #fff;
+    color: ${theme.colors.default.white};
     font-size: ${theme.font.sizes.base};
     font-weight: 600;
     letter-spacing: 1px;
