@@ -64,3 +64,5 @@ Esta aplicação possui a seguinte estrutura de diretórios, a partir do /src, d
 - zod => lib para validação de formulários. Esta lib foi escolhida por causa da sua facilidade de uso, além da possibilidade de inferência de tipos que é por ela fornecida. Tal recurso é muito útil ao usarmos TypeScript.
 
 - react-hook-forms +> junto com zod, a validação de dados de formulário, bem como o uso de hooks para efetuar envio, criação de valores padrões etc., temos uma combinação potente.
+
+- vite => torna o processo de inicialização e criação do projeto mais ágil.
