@@ -51,6 +51,7 @@ export default function Home() {
     const sentDate = new Date(data.date);
 
     // verifica se a data é inválida
+    // nesse caso, verifica se o é um Not a Number.
     if (isNaN(sentDate.getTime())) {
       console.error("Data inválida");
       return;
