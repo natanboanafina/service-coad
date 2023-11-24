@@ -13,11 +13,10 @@ export default function SolicitationList() {
 
   const { formData } = useFormData();
 
+  // início da paginação
   const pageContent = 10;
   const totalPages = Math.ceil(formData.length / pageContent);
-  const initialIndex = (currentPage - 1) * pageContent;
-  const finalIndex = initialIndex + pageContent;
-  const currentContent = formData.slice(initialIndex, finalIndex);
+
   const newDate = new Date().toLocaleDateString("pt-BR");
 
   const filteredContent = formData.filter((data) => {
