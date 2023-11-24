@@ -28,6 +28,7 @@ export const Stripes: React.FC<IStripesProps> = ({
   const [isExtended, setIsExtended] = useState(true);
   return (
     <>
+      {/* PARTE RESPONSÁVEL PELO DISPLAY DAS INFORMAÇÕES RESUMIDAS */}
       <Styled.StripesWrapper>
         <p>{name}</p>
         <p>{mail}</p>
@@ -38,6 +39,7 @@ export const Stripes: React.FC<IStripesProps> = ({
           </button>
         </div>
       </Styled.StripesWrapper>
+      {/* AO CLICAR NA SETA PARA BAIXO, ABRIRÁ ESSE COMPONENTE PARA VISUALIZAÇÃO DETALHADA */}
       {!isExtended && (
         <Styled.FullDataWrapper>
           <div className='data'>
